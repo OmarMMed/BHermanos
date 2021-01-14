@@ -36,11 +36,7 @@ if(isset($_SESSION['user'])):*/?>
 <link rel="icon" href="../../BHermanos/IMGS/clientes.ico">
 <title>Editar Empleado </title>
   <form method="post" action = "guardar_cambios_empleado.php?original=<?php echo"$consulta[0]"; ?>">
-		<h1>Editar información del Empleado <strong><?php echo "$consulta[2]"; ?></strong></h1>
-		<div class="form-group col-md-6">
-		  <label for="inputNombre">Numero de empleado</label>
-		  <input type="number" class="form-control" name="Clave" required value="<?php echo"$consulta[0]"; ?>">
-		</div>
+		<h1>Editar información del Empleado <strong><?php echo "$consulta[1]"; ?></strong></h1>
 		
 		<div class="form-group col-md-6">
 		  <label for="inputNombre">Nombre</label>
