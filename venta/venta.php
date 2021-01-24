@@ -26,8 +26,15 @@
     $_nombreZapato = $row['nombrezapato']; 
     $_precioZapato = $row['precio']; 
     $_imgDir = $row['img_dir'];
-    $_sqlAñadirVenta = "INSERT INTO ventasrealizadas (folio,nombreZapato,idZapato,precio,img_dir)
-    VALUES ('$_folio','$_nombreZapato',$_id,'$_precioZapato','$_imgDir')"; 
+
+    $_idSession = $_SESSION['userId'];
+    $_sqlObtenerID = "SELECT nombre FROM usuarios WHERE idUsuarios = $_idSession"; //Se busca la Máxima ID para crear el folio y añadirlo a la base de datos
+    $resultado = mysqli_query($conn,$_sqlObtenerID);
+    $filas = mysqli_fetch_assoc($resultado);
+    $nombre = $filas['nombre'];
+
+    $_sqlAñadirVenta = "INSERT INTO ventasrealizadas (folio,nombreZapato,idZapato,precio,img_dir,nombreVendedor)
+    VALUES ('$_folio','$_nombreZapato',$_id,'$_precioZapato','$_imgDir', '$nombre')"; 
     mysqli_query($conn,$_sqlAñadirVenta);
 
     //Por último en la tabla de sistemainventario se reduce la existencia en 1

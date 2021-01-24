@@ -24,10 +24,11 @@
                 {
                     echo "<div class='tabla'>";
                         echo"<img src='img/".$row['img_dir']."'>";
+                        echo"<p> <b>Folio: </b>".$row['folio']."</p>";
                         echo"<p> <b>Nombre: </b>".$row['nombreZapato']."</p>";
                         echo"<p> <b>Fecha: </b>".$row['fecha']."</p>";
                         echo"<p> <b>Precio: </b>".$row['precio']."</p>";
-                        echo"<p> <b>Nombre del Vendedor: </b></p>";
+                        echo"<p> <b>Nombre del Vendedor: </b>".$row['nombreVendedor']."</p>";
                     echo"</div>";
                 }
             }
