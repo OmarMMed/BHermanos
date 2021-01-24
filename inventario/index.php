@@ -20,6 +20,7 @@ include("../../BHermanos/header.php");
             <th scope="col">Talla</th>
             <th scope="col">Color</th>
             <th scope="col">Precio</th>
+            <th scope="col">Existencia</th>
             <th scope="col"></th>
             <th scope="col"></th>
             </tr>
@@ -52,6 +53,7 @@ include("../../BHermanos/header.php");
                 echo "<td>".$row->talla . "</td>";
                 echo "<td>".$row->color . "</td>";
                 echo "<td>$".$row->precio . "</td>";
+                echo "<td>".$row->existencia . "</td>";
                 echo"<td><a href='inventario_editar.php?id=".$row->id."''><button class='btn btn-warning'>Editar</button></a></td>";
                 echo"<td><a href='inventario_eliminar.php?id=".$row->id."''><button class='btn btn-danger'>Eliminar</button></a></td>";
             echo "<tr>";
@@ -62,5 +64,5 @@ include("../../BHermanos/header.php");
     ?>
   
     </table>
-    <a href="nuevo_articulo.php"><button style="float:right" class="btn btn-primary">Registrar nuevo articulo</button></a>
+    <a href="../../BHermanos/venta/nuevo_articulo.php"><button style="float:right" class="btn btn-primary">Registrar nuevo articulo</button></a>
 

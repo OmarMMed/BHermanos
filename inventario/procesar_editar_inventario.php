@@ -18,6 +18,7 @@
         $talla = $_POST['talla'];
         $color = $_POST['color'];
         $precio = $_POST['precio'];
+        $existencia = $_POST['existencia'];
         
         $modificar = "UPDATE sistemainventario  
         SET 
@@ -27,7 +28,8 @@
         nombrezapato = '$nombrezapato', 
         talla = '$talla', 
         color = '$color' ,
-        precio = '$precio' 
+        precio = '$precio',
+        existencia = '$existencia' 
         WHERE id = '$id' ";
 
 

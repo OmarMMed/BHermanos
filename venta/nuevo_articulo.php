@@ -1,12 +1,15 @@
 <?php
 /*
     Nombre: Andrés Treviño Burgos
-    Fecha: 22/01/2021
+    Fecha: 10/01/2021
     Este código lo que hace es guardar un zapato con su información, mientras que la info del HTML es 
     autoexplicatoria (se crea un div donde se escriben los datos del zapato), 
     el PHP guarda estos datos y los introduce en la base de datos, además de que guarda la imagen en la 
     carpeta img, esto lo hace con la variable $_target 
 */
+
+include("../../BHermanos/header.php");
+
 $msg = "";
 include('includes/connection.inc.php');
 
@@ -58,7 +61,7 @@ include('includes/connection.inc.php');
     </head>
     <body>
         <h2 class="alinearT">Agregar Zapato</h2>
-        <form method="post" action="añadirInventario.php" enctype="multipart/form-data">
+        <form method="post" action="nuevo_articulo.php" enctype="multipart/form-data">
         <!--Si no entiendes esto que haces en la clase-->
             <div class="display centrar">
                     <label> Nombre del Zapato: </label> <br>

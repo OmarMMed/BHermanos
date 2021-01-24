@@ -49,6 +49,10 @@ include("../../BHermanos/header.php");
         <label for="">Precio</label>
         <input  value="<?php echo $row->precio; ?>"type="float" class="form-control"  name="precio" required>
     </div><br>
+    <div class="form-group">
+        <label for="">Existencia</label>
+        <input  value="<?php echo $row->existencia; ?>"type="number" class="form-control"  name="existencia" required>
+    </div><br>
     <button type="submit" class="btn btn-warning">Actualizar</button>
     
 </form>
