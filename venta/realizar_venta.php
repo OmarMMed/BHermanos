@@ -2,6 +2,7 @@
     //Esta página muestra todos los elementos del inventario, sus datos y una imagen de ella
     //Esta parte del código es auto explicatoria
     include("includes/connection.inc.php");
+    include("../../BHermanos/header.php");
     $sql = "SELECT * FROM 
     sistemainventario 
     WHERE existencia > 0";

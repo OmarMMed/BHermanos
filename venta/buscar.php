@@ -1,5 +1,6 @@
 <?php 
 include('includes/connection.inc.php'); //Conexión
+include("../../BHermanos/header.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,10 @@ include('includes/connection.inc.php'); //Conexión
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
 <body>
+        <form action="buscar.php" method="POST">
+            <input type="text" placeholder="Búsqueda" name="busqueda">
+            <button type="submit" name="buscar">Buscar</button>
+        </form>
         <?php
             if(isset($_POST['buscar'])) //Si se accede a la página por POST ejecuta el siguiente código
             {

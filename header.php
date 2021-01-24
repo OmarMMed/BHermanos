@@ -41,6 +41,10 @@
           <li class="nav-item active">
             <a class="nav-link" href="../../BHermanos/inventario/index.php">Inventario <span class="sr-only">(current)</span></a>
           </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="../../BHermanos/venta/historial.php">Historial Ventas <span class="sr-only">(current)</span></a>
+          </li>
           
           <li class="nav-item">
             <button class="btn btn-danger">Cerrar Sesion</button>     

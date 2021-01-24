@@ -3,6 +3,9 @@
     include("includes/connection.inc.php");
     $sql = "SELECT * FROM  ventasrealizadas";
     $result = mysqli_query($conn,$sql);
+
+    include("../../BHermanos/header.php");
+
 ?>
 <!DOCTYPE html>
 <html>

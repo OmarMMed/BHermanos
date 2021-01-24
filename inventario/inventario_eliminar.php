@@ -52,4 +52,8 @@ include("../../BHermanos/header.php");
     <button type="submit" class="btn btn-warning">Eliminar</button>
     
 </form>
-<a href="index.php"><button class="btn btn-danger" style="margin-left:908px; margin-top:-98px;">Cancelar</button></a>
+<form method="post" action ="../../BHermanos/inventario/index.php">
+                <div class="form-group col-md-10">
+                    <button type="submit" class="btn btn-primary">Cancelar</button>
+                </div>
+            </form>

@@ -42,10 +42,12 @@ include('includes/connection.inc.php');
          if(move_uploaded_file($_FILES['imagen']['tmp_name'],$_target))
          {
              $msg = "Imagen subida exitosamente";
+             header('Location: ../../BHermanos/inventario/index.php');
          }
          else
          {
              $msg = "Hubo un problema subiendo la imagen";
+             header('Location: ../../BHermanos/inventario/index.php');
          }
 
     }
@@ -65,23 +67,30 @@ include('includes/connection.inc.php');
         <!--Si no entiendes esto que haces en la clase-->
             <div class="display centrar">
                     <label> Nombre del Zapato: </label> <br>
-                    <input type="text" name="nombrezapato"> <br>
+                    <input type="text" name="nombrezapato" required> <br>
                     <label>Marca: </label> <br>
-                    <input type="text" name="marca"> <br>
+                    <input type="text" name="marca" required> <br>
                     <label>Talla: </label> <br>
-                    <input type="number" name="talla"> <br>
+                    <input type="number" name="talla" required> <br>
                     <label>Color: </label> <br>
-                    <input type="text" name="color"> <br>
+                    <input type="text" name="color" required> <br>
                     <label>Precio: </label> <br>
-                    <input type="number" name="precio"> <br>
+                    <input type="number" name="precio" required> <br>
                     <label>Sucursal: </label> <br>
-                    <input type="text" name="sucursal"> <br>
+                    <input type="text" name="sucursal" required> <br>
                     <label>Existencia: </label> <br>
-                    <input type="number" name="existencia"> <br>
+                    <input type="number" name="existencia" required> <br>
                     <label>Imagen: </label> <br>
-                    <input type="file" name="imagen"> <br>
-                    <input type="submit" name="subirImagen" value="Subir Imagen" class="button">
+                    <input type="file" name="imagen" required> <br>
+                    <input type="submit" name="subirImagen" value="Agregar" class="button">
             </div>
         </form>
+
+        <form method="post" action ="../../BHermanos/inventario/index.php">
+                <div class="form-group col-md-10">
+                    <button type="submit" class="btn btn-primary">Cancelar</button>
+                </div>
+            </form>
+        
     </body>
 </html>

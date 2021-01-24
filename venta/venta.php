@@ -4,6 +4,9 @@
         la venta a la tabla de ventas realizadas
     */
     include("includes/connection.inc.php");
+
+    include("../../BHermanos/header.php");
+
     
     //Este código está dividido en  3 partes
 
@@ -52,6 +55,11 @@
             <?php echo "<label><b>Color: </b>". $row['color']."</label> <br>";?>
             <?php echo "<label><b>Sucursal: </b>".$row['sucursal']."</label> <br>";?>
             <b><?php echo "El folio del artículo es: ".$_folio?></b>
+            <form method="post" action ="realizar_venta.php">
+                <div class="form-group col-md-10">
+                    <button type="submit" class="btn btn-primary">Volver</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
