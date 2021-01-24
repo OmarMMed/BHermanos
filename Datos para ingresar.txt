@@ -1,0 +1,7 @@
+Crear un nuevo usuario y en el campo contrasena ingrese el siguiente texto:
+
+$2y$10$IrTzozKvGbjPR8n0Ojo4gOshYKVgtkVJK3cyOsVYfh2O8jm3XvV4e
+
+Esto es la contraseña 123 despues del hash 
+
+Para iniciar sesión ingrese el id y la contraseña 123
